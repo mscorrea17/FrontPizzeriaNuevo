@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import PizzaCard from '../components/PizzaCard.vue';
 import ShoppingCart from '../components/ShoppingCart.vue';
+import Navbar from '../components/Navbar.vue';
 
 const pizzas = ref([]);
 const loading = ref(true);
@@ -71,8 +72,8 @@ const addToCart = (pizza) => {
   }
 };
 </script>
-
 <template>
+   <Navbar />
   <!-- Sección con la imagen de fondo y texto superpuesto -->
   <section class="hero">
     <div class="hero-overlay">
@@ -112,7 +113,7 @@ const addToCart = (pizza) => {
   background-image: url('/src/assets/Pizza.jpg'); /* Ruta de la imagen */
   background-size: cover;
   background-position: center;
-  height: 25vh; /* Altura de la sección */
+  height: 32.5vh; /* Altura de la sección */
   position: relative;
   display: flex;
   align-items: center;

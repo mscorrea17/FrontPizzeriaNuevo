@@ -3,8 +3,8 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const goToLogin = () => {
-  router.push('/login');
+const goToMenu = () => {
+  router.push('/menu');
 };
 </script>
 
@@ -13,7 +13,7 @@ const goToLogin = () => {
     <div class="container">
       <h1 class="display-4 fw-bold">CECEP PIZZERIA</h1>
       <p class="lead mb-4">Las mejores pizzas de la ciudad</p>
-      <button class="btn btn-primary btn-lg" @click="goToLogin">Ordenar Ahora</button>
+      <button class="btn btn-outline-light ms-auto" @click="goToMenu">Ordenar Ahora</button>
     </div>
   </div>
 </template>
@@ -26,5 +26,5 @@ const goToLogin = () => {
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.7)),
     url('../assets/Pizza.jpg') center/cover;
 }
-</style>
 
+</style>

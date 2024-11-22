@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const goToLogin = () => {
-  router.push('/login');
+  router.push('/');
 };
 </script>
 
@@ -12,7 +12,7 @@ const goToLogin = () => {
   <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
     <div class="container">
       <!-- Imagen antes del texto -->
-      <router-link class="navbar-brand d-flex align-items-center" to="/">
+      <router-link class="navbar-brand d-flex align-items-center" to="/Inicio">
         <img src="/images/descarga.png" alt="Logo" class="navbar-logo me-2" />
         CECEP PIZZERIA
       </router-link>
@@ -21,17 +21,15 @@ const goToLogin = () => {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto d-flex justify-content-center">
-          <li class="nav-item mx-4"> <!-- Margen horizontal mayor -->
-            <router-link class="nav-link" to="/">Inicio</router-link>
+          <li class="nav-item mx-4">
+            <router-link class="nav-link" to="/Inicio">Inicio</router-link>
           </li>
-          <li class="nav-item mx-4"> <!-- Margen horizontal mayor -->
+          <li class="nav-item mx-4">
             <a class="nav-link" href="/Menu">Menú</a>
           </li>
-          <li class="nav-item mx-4"> <!-- Margen horizontal mayor -->
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
+>
         </ul>
-        <button class="btn btn-outline-light ms-auto" @click="goToLogin">Iniciar Sesión</button>
+        <button class="btn btn-outline-light ms-auto" @click="goToLogin">Cerrar Sesion</button>
       </div>
     </div>
   </nav>
@@ -57,7 +55,4 @@ const goToLogin = () => {
   gap: 3rem; /* Espaciado entre opciones del menú */
 }
 
-.nav-item {
-  text-align: center;
-}
 </style>

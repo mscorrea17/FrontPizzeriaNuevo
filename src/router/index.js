@@ -5,12 +5,12 @@ import Menu from '../views/Menu.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/Inicio',
     name: 'inicio',
     component: Inicio
   },
   {
-    path: '/login',
+    path: '/',
     name: 'login',
     component: LoginView
   },

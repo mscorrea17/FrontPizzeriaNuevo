@@ -40,7 +40,7 @@ onMounted(fetchPizzas)
 <template>
   <section id="menu" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5">Pizzas Recomendadas</h2>
+      <h5 class="text-center mb-5"> Recomendadas por el chef</h5>
       <div class="row">
         <div v-for="pizza in pizzas" :key="pizza.id" class="col-md-4 mb-4">
           <div class="card">
