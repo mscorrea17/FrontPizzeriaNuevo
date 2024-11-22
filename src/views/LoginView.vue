@@ -18,43 +18,46 @@ const handleLogin = () => {
 
 <template>
   <div class="form-container">
-    <div class="card">
-      <div class="card-body">
+  <div class="card">
+    <div class="card-body">
+      <!-- Imagen centrada -->
+      <div class="logo-container">
         <img src="/images/descarga.png" alt="Logo" class="form-logo" width="80">
-        <h2 class="text-center mb-4">Iniciar Sesión</h2>
-
-        <form @submit.prevent="handleLogin">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              v-model="email"
-              required
-            >
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              v-model="password"
-              required
-            >
-          </div>
-          <button
-            type="submit"
-            class="btn btn-primary w-100"
-            :disabled="!isFormValid"
-          >
-            Ingresar
-          </button>
-        </form>
       </div>
+
+      <h4 class="text-center mb-4">CECEP PIZZERIA</h4>
+      <form @submit.prevent="handleLogin">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            v-model="email"
+            required
+          >
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            v-model="password"
+            required
+          >
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          :disabled="!isFormValid"
+        >
+          Ingresar
+        </button>
+      </form>
     </div>
   </div>
+</div>
 </template>
 
 <style scoped>
@@ -83,5 +86,16 @@ const handleLogin = () => {
 .card-body {
   padding: 20px;
   background: rgb(206, 206, 206);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  margin-bottom: 20px; /* Espacio entre la imagen y el título */
+}
+
+.form-logo {
+  max-width: 100%; /* Asegura que la imagen nunca exceda el tamaño del contenedor */
+  height: auto; /* Mantiene las proporciones de la imagen */
 }
 </style>
