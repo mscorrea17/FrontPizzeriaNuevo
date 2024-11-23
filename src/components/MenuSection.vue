@@ -5,28 +5,27 @@ const pizzas = ref([])
 
 const fetchPizzas = async () => {
   try {
-    // Simulación de API
     pizzas.value = [
       {
         id: 1,
         name: 'Margherita',
         price: 25000,
         description: 'Tomate, mozzarella y albahaca',
-        image: '/images/tomate.png' // Imagen para Pizza Margherita
+        image: '/images/tomate.png'
       },
       {
         id: 2,
         name: 'Pepperoni',
         price: 28000,
         description: 'Pepperoni y mozzarella',
-        image: '/images/peperoni.png' // Imagen para Pizza Pepperoni
+        image: '/images/peperoni.png'
       },
       {
         id: 3,
         name: 'Hawaiana',
         price: 27000,
         description: 'Jamón, piña y mozzarella',
-        image: '/images/hawaiana.png' // Imagen para Pizza Hawaiana
+        image: '/images/hawaiana.png'
       }
     ]
   } catch (error) {
@@ -40,15 +39,15 @@ onMounted(fetchPizzas)
 <template>
   <section id="menu" class="py-5">
     <div class="container">
-      <h5 class="text-center mb-5"> Recomendadas por el chef</h5>
+      <h5 class="text-center mb-5 text-uppercase font-weight-bold">RECOMENDADAS DEL CHEF</h5>
       <div class="row">
         <div v-for="pizza in pizzas" :key="pizza.id" class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card shadow-sm border-0 rounded-lg overflow-hidden">
             <img :src="pizza.image" :alt="pizza.name" class="card-img-top pizza-image" />
-            <div class="card-body">
-              <h5 class="card-title">{{ pizza.name }}</h5>
-              <p class="card-text">{{ pizza.description }}</p>
-              <p class="card-text"><strong>${{ pizza.price.toLocaleString() }}</strong></p>
+            <div class="card-body text-center">
+              <h5 class="card-title font-weight-bold text-dark">{{ pizza.name }}</h5>
+              <p class="card-text text-muted">{{ pizza.description }}</p>
+              <p class="card-text text-primary"><strong>${{ pizza.price.toLocaleString() }}</strong></p>
             </div>
           </div>
         </div>
@@ -58,12 +57,40 @@ onMounted(fetchPizzas)
 </template>
 
 <style scoped>
-/* Estilo para las imágenes de las pizzas */
 .pizza-image {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 200px; /* Altura fija para todas las imágenes */
-  object-fit: cover; /* Asegura que las imágenes mantengan proporción */
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+h5 {
+  font-size: 1.5rem;
+  color: #333;
 }
 </style>

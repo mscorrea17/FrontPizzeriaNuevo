@@ -11,10 +11,9 @@ const goToLogin = () => {
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
     <div class="container">
-      <!-- Imagen antes del texto -->
       <router-link class="navbar-brand d-flex align-items-center" to="/Inicio">
         <img src="/images/descarga.png" alt="Logo" class="navbar-logo me-2" />
-        CECEP PIZZERIA
+        <span class="brand-text">CECEP PIZZERIA</span>
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -28,39 +27,73 @@ const goToLogin = () => {
             <a class="nav-link" href="/Menu">Menú</a>
           </li>
         </ul>
-        <button class="btn btn-outline-light ms-3" @click="goToLogin">Cerrar Sesión</button>
+        <button class="btn custom-btn ms-3" @click="goToLogin">Cerrar Sesión</button>
       </div>
     </div>
   </nav>
 </template>
 
-
 <style scoped>
 .custom-navbar {
-  background-color: black !important; 
-  border-bottom: 3px solid rgba(68, 0, 255, 0.1); 
+  background: linear-gradient(90deg, #000000, #434343);
+  border-bottom: 3px solid #ffffff1a;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo {
-  height: 40px; 
-  width: auto; 
+  height: 45px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.nav-link {
-  font-size: 18px;
-  color: white !important; 
+.navbar-logo:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-nav {
-  gap: 3rem;
+  gap: 2.5rem;
 }
+
+.nav-link {
+  font-size: 1.1rem;
+  color: white !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
 .nav-link:hover {
   color: #ffcc00 !important;
+  transform: translateY(-3px);
 }
 
 .nav-link:active {
-  transform: scale(0.95); 
-  color: #ff0000 !important; 
+  transform: scale(0.9);
+  color: #ff5500 !important;
 }
 
+.custom-btn {
+  background-color: transparent;
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.custom-btn:active {
+  transform: scale(0.95);
+}
 </style>

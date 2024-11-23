@@ -25,10 +25,10 @@ const handleLogin = () => {
         <img src="/images/descarga.png" alt="Logo" class="form-logo" width="80">
       </div>
 
-      <h4 class="text-center mb-4">CECEP PIZZERIA</h4>
+      <h4 class="text-center mb-4">PIZZERIA CECEP</h4>
       <form @submit.prevent="handleLogin">
         <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label">Usuario</label>
           <input
             type="email"
             class="form-control"

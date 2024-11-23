@@ -11,9 +11,8 @@ const cartRef = ref(null);
 
 onMounted(async () => {
   try {
-    // Simular datos de la API
     pizzas.value = [
-    {
+      {
         id: 1,
         name: 'Pizza Margherita',
         description: 'Tomate, mozzarella, albahaca',
@@ -38,21 +37,21 @@ onMounted(async () => {
         id: 4,
         name: 'Pizza Napolitana',
         description: 'Salsa de tomate, anchoas, alcaparras, orégano, aceite de oliva',
-        price: 26000,
+        price: 22000,
         image: '/images/napolitana.png'
       },
       {
         id: 5,
         name: 'Pizza Cuatro Quesos',
         description: 'Variedad de quesos: Mozzarella, parmesano, gorgonzola, queso crema',
-        price: 28000,
+        price: 23000,
         image: '/images/quesos.png'
       },
       {
         id: 6,
         name: 'Pizza Vegetariana',
         description: 'Tomate, pimientos, champiñones, cebolla, aceitunas, mozzarell',
-        price: 26000,
+        price: 22000,
         image: '/images/vegetariana.jpg'
       }
     ];
@@ -72,18 +71,17 @@ const addToCart = (pizza) => {
   }
 };
 </script>
+
 <template>
-   <Navbar />
-  <!-- Sección con la imagen de fondo y texto superpuesto -->
+  <Navbar />
   <section class="hero">
     <div class="hero-overlay">
       <div class="hero-text">
-        <h1>MENÚ </h1>
+        <h1>MENÚ</h1>
       </div>
     </div>
   </section>
 
-  <!-- Contenido principal del menú -->
   <div class="container py-5">
     <h5 class="text-center mb-5">Prueba las mejores pizzas de la ciudad</h5>
     
@@ -108,23 +106,23 @@ const addToCart = (pizza) => {
 </template>
 
 <style scoped>
-/* Estilo para la sección hero */
 .hero {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.3), rgba(4, 1, 31, 0.3)), url('/src/assets/Pizza.jpg'); 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(4, 1, 31, 0.4)), url('/src/assets/Pizza.jpg'); 
   background-size: cover;
   background-position: center;
-  height: 33.8vh; /* Altura de la sección */
+  height: 40vh; 
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
+  border-bottom: 5px solid #fff;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mayor contraste */
+  background: rgba(0, 0, 0, 0.6); 
   position: absolute;
   top: 0;
   left: 0;
@@ -140,8 +138,10 @@ const addToCart = (pizza) => {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
   margin-bottom: 1rem;
 }
 
@@ -153,5 +153,78 @@ const addToCart = (pizza) => {
 .hero .btn {
   font-size: 1.2rem;
   padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background-color: #ff5733;
+  color: #fff;
+}
+
+.hero .btn:hover {
+  background-color: #c0392b;
+}
+
+.container h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1.25rem;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .card-body {
+  background-color: #f1f1f1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card-text strong {
+  font-weight: bold;
+}
+
+.spinner-border {
+  border-color: #ff5733;
+}
+
+.alert {
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 10px;
 }
 </style>
