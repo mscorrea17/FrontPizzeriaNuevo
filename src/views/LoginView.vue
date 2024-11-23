@@ -71,7 +71,6 @@ const handleLogin = () => {
     linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.8)),
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(2, 2, 2, 0.7)),url(/public/images/PizzaLogin.jpg);
   background-size: cover;
-  padding: 20px;
 }
 
 /* Ajustar el tamaño del formulario */
