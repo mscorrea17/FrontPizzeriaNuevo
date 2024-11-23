@@ -110,10 +110,11 @@ const addToCart = (pizza) => {
 <style scoped>
 /* Estilo para la sección hero */
 .hero {
-  background-image: url('/src/assets/Pizza.jpg'); /* Ruta de la imagen */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(4, 1, 31, 0.3)), url('/src/assets/Pizza.jpg'); 
   background-size: cover;
   background-position: center;
-  height: 32.5vh; /* Altura de la sección */
+  height: 33.8vh; /* Altura de la sección */
   position: relative;
   display: flex;
   align-items: center;

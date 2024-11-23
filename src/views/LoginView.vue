@@ -78,7 +78,7 @@ const handleLogin = () => {
 .card {
   width: 100%;
   max-width: 400px;
-  opacity: 0.95;
+  opacity: 0.70;
 
 }
 

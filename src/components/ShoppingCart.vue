@@ -69,7 +69,7 @@ defineExpose({
           <div class="mt-4">
             <h4>Total: ${{ total.toFixed(2) }}</h4>
             <button class="btn btn-success w-100" @click="checkout">
-              Proceder al pago
+              Hacer pedido
             </button>
           </div>
         </template>

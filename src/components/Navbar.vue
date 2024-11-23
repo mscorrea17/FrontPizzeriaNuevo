@@ -20,39 +20,47 @@ const goToLogin = () => {
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto d-flex justify-content-center">
-          <li class="nav-item mx-4">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
             <router-link class="nav-link" to="/Inicio">Inicio</router-link>
           </li>
-          <li class="nav-item mx-4">
+          <li class="nav-item">
             <a class="nav-link" href="/Menu">Menú</a>
           </li>
->
         </ul>
-        <button class="btn btn-outline-light ms-auto" @click="goToLogin">Cerrar Sesion</button>
+        <button class="btn btn-outline-light ms-3" @click="goToLogin">Cerrar Sesión</button>
       </div>
     </div>
   </nav>
 </template>
 
+
 <style scoped>
 .custom-navbar {
-  background-color: black !important; /* Fondo negro */
-  border-bottom: 3px solid rgba(68, 0, 255, 0.1); /* Línea decorativa opcional */
+  background-color: black !important; 
+  border-bottom: 3px solid rgba(68, 0, 255, 0.1); 
 }
 
 .navbar-logo {
-  height: 40px; /* Ajusta el tamaño del logo */
-  width: auto; /* Mantén la proporción de la imagen */
+  height: 40px; 
+  width: auto; 
 }
 
 .nav-link {
-  font-size: 18px; /* Aumenta el tamaño del texto */
-  color: white !important; /* Asegura que el texto sea visible */
+  font-size: 18px;
+  color: white !important; 
 }
 
 .navbar-nav {
-  gap: 3rem; /* Espaciado entre opciones del menú */
+  gap: 3rem;
+}
+.nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+.nav-link:active {
+  transform: scale(0.95); 
+  color: #ff0000 !important; 
 }
 
 </style>
