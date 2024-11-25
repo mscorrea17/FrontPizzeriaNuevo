@@ -26,6 +26,12 @@ const goToLogin = () => {
           <li class="nav-item">
             <a class="nav-link" href="/Menu">Menú</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Menu">Ordenes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Menu"></a>
+          </li>
         </ul>
         <button class="btn custom-btn ms-3" @click="goToLogin">Cerrar Sesión</button>
       </div>
@@ -44,7 +50,7 @@ const goToLogin = () => {
 .navbar-logo {
   height: 45px;
   width: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.10s ease;
 }
 
 .navbar-logo:hover {

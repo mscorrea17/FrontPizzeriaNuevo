@@ -105,8 +105,8 @@ defineExpose({
           />
           <div class="mt-4">
             <h4 class="fw-bold">Total: ${{ total.toFixed(2) }}</h4>
-            <button class="btn btn-success w-100 shadow-lg" @click="isModalOpen = true">
-              Generar Pedido
+            <button class="btn btn-success w-100 shadow-lg" @click="checkout">
+              Generar pedido
             </button>
             <button class="btn btn-danger w-100 mt-2 shadow-lg" @click="clearCart">Vaciar Carrito</button>
           </div>
