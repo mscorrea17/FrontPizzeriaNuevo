@@ -77,13 +77,13 @@ const addToCart = (pizza) => {
   <section class="hero">
     <div class="hero-overlay">
       <div class="hero-text">
-        <h1>MENÚ</h1>
+        <h1 class="display-4 fw-bold title-shadow">MENÚ</h1>
       </div>
     </div>
   </section>
 
   <div class="container py-5">
-    <h5 class="text-center mb-5">Prueba las mejores pizzas de la ciudad</h5>
+    <h5 class="text-center mb-5">¿QUE ESPERAS PARA PROBAR LAS MEJORES PIZZAS DE CALI?</h5>
     
     <div v-if="loading" class="text-center">
       <div class="spinner-border" role="status">
@@ -108,10 +108,11 @@ const addToCart = (pizza) => {
 <style scoped>
 .hero {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(4, 1, 31, 0.4)), url('/src/assets/Pizza.jpg'); 
+    url('../assets/Pizza.jpg') center/cover;
   background-size: cover;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
   background-position: center;
-  height: 40vh; 
+  height: 32.8vh; 
   position: relative;
   display: flex;
   align-items: center;
