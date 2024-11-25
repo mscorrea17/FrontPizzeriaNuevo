@@ -27,10 +27,10 @@ const goToLogin = () => {
             <a class="nav-link" href="/Menu">Menú</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Menu">Ordenes</a>
+            <a class="nav-link" href="/Ordenes">Ordenes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/Menu"></a>
+            <a class="nav-link" href="/"></a>
           </li>
         </ul>
         <button class="btn custom-btn ms-3" @click="goToLogin">Cerrar Sesión</button>

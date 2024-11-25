@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Inicio from '../views/Inicio.vue';
 import LoginView from '../views/LoginView.vue';
 import Menu from '../views/Menu.vue';
+import ordenes from '../views/ordenes.vue';
 
 const routes = [
   {
@@ -15,9 +16,15 @@ const routes = [
     component: LoginView
   },
   {
-    path: '/menu', // Cambiar el path a '/menu'
+    path: '/menu',
     name: 'menu',
     component: Menu
+  },
+
+  {
+    path: '/ordenes',
+    name: 'ordenes',
+    component: ordenes
   }
 ];
 
